@@ -1,0 +1,18 @@
+form{
+    width: 300px;
+    align-items: center;
+    
+    
+}
+
+h2{
+    margin-left: 700px;
+}
+
+.alert{
+    padding: 2px;
+    background-color:red;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+  }

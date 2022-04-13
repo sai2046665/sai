@@ -1,0 +1,35 @@
+.main {
+    margin-left: 160px; /* Same as the width of the sidenav */
+     /* Increased text to enable scrolling */
+    padding: 0px 10px;
+  }
+  
+  .alert {
+    padding: 2px;
+    background-color:green;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+  }
+  
+  .alert-error{
+    padding: 2px;
+    background-color:red;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+  }
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: normal;
+    float: center;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .closebtn:hover {
+    color: black;
+  }

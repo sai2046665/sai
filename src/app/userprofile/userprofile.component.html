@@ -1,0 +1,62 @@
+<!-- <table class="table-fill" *ngIf="userDetails">
+
+    <thead>
+        <tr>
+            <th colspan="2" class="text-center">User Profile</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>First Name</td>
+            <td>{{userDetails.username}}</td>
+        </tr>
+        <tr>
+            <td colspan="2" class="text-center">
+                <input type="button" (click)="onLogout()" value="Logout">
+            </td>
+        </tr>
+    </tbody>
+</table> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+
+<div class="row" style="padding-left: 20px;">
+    <div class="col-sm-6">
+<h2>Welcome : <b>{{username}}</b></h2>
+</div>
+<div class="col-sm-3">
+    <a [routerLink]="['/slideShow',id]"><button>Start Slideshow</button></a>
+    </div>
+<div class="col-sm-3">
+<h4><b style="text-align: right;">{{date}}</b></h4>
+</div>
+</div>
+
+<!-- <table *ngFor="let user of data">
+    
+        <td>
+            <a target="_blank" href={{user}}>
+                <img src={{user}} alt="Forest" style="width:150px">
+              </a>
+
+        </td>
+    
+</table> -->
+<div class="row" style="padding-left: 20px;">
+    <div class="column" *ngFor="let user of data">
+        <a target="_blank" href={{user}}>
+            <img src={{user}} alt="Forest" style="width:200px">
+          </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

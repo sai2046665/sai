@@ -1,0 +1,32 @@
+
+<div>
+  <div class="alert" *ngIf="errorMessage">
+    {{errorMessage}}
+    </div>
+<form [formGroup] = "adminLoginForm" (ngSubmit)="onAdminLogin()">
+<div class="cont">
+  <div class="form sign-in">
+    <h2>Welcome Admin,</h2>
+    <label for="username">
+      <span>Username</span>
+      <input type="text"  formControlName="username" class="form-control" [ngClass]="{'is-invalid': submitted && frm.username.errors}"/>
+    <div *ngIf ="submitted && frm.username.errors" class="invalid">
+        <div *ngIf="frm.username.errors.required">username is required</div>
+    </div>
+    </label>
+    <label for="password">
+      <span>Password</span>
+      <input type="password" formControlName="password" class="form-control" [ngClass]="{'is-invalid': submitted && frm.password.errors}"/>
+    <div *ngIf ="submitted && frm.password.errors" class="invalid">
+        <div *ngIf="frm.password.errors.required">password is required</div>
+    </div>
+    </label>
+    <button class="submit" [disabled]="loading" ><span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>Login</button>
+  </div>
+  <div class="sub-cont">
+    <div class="img">
+    </div>
+  </div>
+</div>
+</form>
+</div>

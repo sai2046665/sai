@@ -1,0 +1,101 @@
+<app-sidenav></app-sidenav> 
+
+
+<div class="main">
+    <div class="container" style="max-width: 800px;">
+        <div class="row justify-content-center">
+                            <div class="col-md-8">
+                                <div class="card">
+                                    <div class="card-header" style="text-align: center;">Register</div>
+                                    <div class="card-body">
+        
+                                        <form [formGroup] = "userRegForm" (ngSubmit)="onRegistration()" style="max-height: 600px;">
+        
+                                            <div class="form-group">
+                                                <label for="name" class="cols-sm-2 control-label" style="font-size: 20px;">Your Name</label>
+                                                <!-- <div class="cols-sm-10">
+                                                    <div class="input-group"> -->
+                                                        <input type="text" class="form-control" formControlName="name" name="name" id="name" placeholder="Enter your Name" [ngClass]="{'is-invalid': submitted && frm.name.errors}"/>
+                                                        <div *ngIf ="submitted && frm.name.errors" class="invalid">
+                                                            <div *ngIf="frm.name.errors.required" style="font-size: 15px;">name is required</div>
+                                                        </div>
+                                                    <!-- </div>
+                                                </div> -->
+                                            </div>
+                                            <!-- <div class="form-group">
+                                                <label for="email" class="cols-sm-2 control-label"style="font-size: 20px;">Your Email</label>
+                                                <div class="cols-sm-10">
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                                                        <input type="text" class="form-control" name="email" id="email" placeholder="Enter your Email" />
+                                                    </div>
+                                                </div>
+                                            </div> -->
+                                            <div class="form-group">
+                                                <label for="username" class="cols-sm-2 control-label"style="font-size: 20px;">Username</label>
+                                                <!-- <div class="cols-sm-10">
+                                                    <div class="input-group"> -->
+                                                       
+                                                        <input type="text" class="form-control" formControlName="username" name="username" id="username" placeholder="Enter your Username" [ngClass]="{'is-invalid': submitted && frm.username.errors}"/>
+                                                        <div *ngIf ="submitted && frm.username.errors" class="invalid">
+                                                            <div *ngIf="frm.username.errors.required" style="font-size: 15px;">username is required</div>
+                                                        </div>
+                                                    <!-- </div>
+                                                </div> -->
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="password" class="cols-sm-2 control-label"style="font-size: 20px;">Password</label>
+                                                <!-- <div class="cols-sm-10">
+                                                    <div class="input-group"> -->
+                                                       
+                                                        <input type="password" class="form-control" formControlName="password" name="password" id="password" placeholder="Enter your Password" [ngClass]="{'is-invalid': submitted && frm.password.errors}"/>
+                                                        <div *ngIf ="submitted && frm.password.errors" class="invalid">
+                                                            <div *ngIf="frm.password.errors.required" style="font-size: 15px;">password is required</div>
+                                                        </div>
+                                                    <!-- </div>
+                                                </div> -->
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="cnfpassword" class="cols-sm-2 control-label"style="font-size: 20px;">Confirm Password</label>
+                                                <!-- <div class="cols-sm-10">
+                                                    <div class="input-group"> -->
+                                                        
+                                                        <input type="text" class="form-control" formControlName="cnfpassword" name="confirm" id="confirm" placeholder="Confirm your Password" [ngClass]="{'is-invalid': submitted && frm.cnfpassword.errors}" />
+                                                        <div *ngIf ="submitted && frm.cnfpassword.errors" class="invalid">
+                                                            <div *ngIf="frm.cnfpassword.errors.required" style="font-size: 15px;">Confirm password is required</div>
+                                                            <div *ngIf="frm.cnfpassword.errors.confirmedValidator" style="font-size: 15px;">Confirm password must match with Password.</div>
+                                                        </div>
+                                                    <!-- </div>
+                                                </div> -->
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="address" class="cols-sm-2 control-label"style="font-size: 20px;">Address</label>
+                                                <!-- <div class="cols-sm-10">
+                                                    <div class="input-group"> -->
+                                                        
+                                                        <input type="textbox" class="form-control" formControlName="address" name="address" id="address" placeholder="Address" [ngClass]="{'is-invalid': submitted && frm.address.errors}" />
+                                                        <div *ngIf ="submitted && frm.address.errors" class="invalid">
+                                                            <div *ngIf="frm.address.errors.required" style="font-size: 15px;">Please provide your Address</div>
+                                                        </div>
+                                                    <!-- </div>
+                                                </div> -->
+                                            </div>
+                                            <div class="form-group ">
+                                                <button type="submit" class="btn btn-primary btn-lg btn-block login-button" [disabled]="loading">
+                                                    <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>Register</button>
+                                            </div>
+                                        </form>
+                                        <div class="alert-error" *ngIf="serverErrorMessage">
+                                            {{serverErrorMessage}}
+                                            </div>
+                                            <div class="alert" *ngIf="userMessage">
+                                                {{userMessage}}
+                                                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+                                        </div>
+                                    </div>
+        
+                                </div>
+                            </div>
+                        </div>
+        </div>
+ </div>

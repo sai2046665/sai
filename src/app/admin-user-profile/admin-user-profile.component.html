@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+
+<h2>Thumbnail Images for the user: <b>{{username}}</b></h2>
+<!-- <table *ngFor="let user of data">
+    
+        <td>
+            <a target="_blank" href={{user}}>
+                <img src={{user}} alt="Forest" style="width:150px">
+              </a>
+
+        </td>
+    
+</table> -->
+<div class="row" >
+    <div class="column" *ngFor="let user of data">
+        <a target="_blank" href={{user}}>
+            <img src={{user}} alt="Forest" style="width:250px">
+          </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>
